@@ -20,7 +20,7 @@ body, html {
 }
 
 /* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
+.bgimg-1, .bgimg-1-2, .bgimg-2, .bgimg-3 {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -31,6 +31,11 @@ body, html {
 .bgimg-1 {
     background-image: url('img/clouds.gif');
     min-height: 100%;
+}
+
+.bgimg-1-2 {
+    background-image: url('img/clouds.gif');
+    min-height: 25%;
 }
 
 /* Second image (Applications) */
@@ -66,60 +71,55 @@ body, html {
 <!-- Navbar (sit on top) -->
 <div class="w3-white">
   <div class="w3-bar" id="myNavbar">
-
     <a href="./index.html" class="w3-bar-item w3-button">HOME</a>
-  <div class="w3-dropdown-hover">
-    <button class="w3-button"><i class="fa fa-bar-chart-o"></i>   APPLICATIONS</button>
-      <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="https://lifescience.shinyapps.io/celltools/" class="w3-bar-item w3-button">CellTools</a>
-        <a href="https://lifescience.shinyapps.io/cardioprofiler/" class="w3-bar-item w3-button">CardioProfiler</a>
-      </div>
-  </div>
-    <a href="publications.html" class="w3-bar-item w3-button"><i class="fa fa-file-pdf-o"></i>   PUBLICATIONS</a>
-    <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i>   CONTACT</a>
-    </a>
+    <div class="w3-dropdown-hover">
+      <button class="w3-button"><i class="fa fa-bar-chart-o"></i>   APPLICATIONS</button>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a href="https://lifescience.shinyapps.io/celltools/" class="w3-bar-item w3-button">CellTools</a>
+          <a href="https://lifescience.shinyapps.io/cardioprofiler/" class="w3-bar-item w3-button">CardioProfiler</a>
+        </div>
+    </div>
+      <a href="publications.html" class="w3-bar-item w3-button"><i class="fa fa-file-pdf-o"></i>   PUBLICATIONS</a>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i>   CONTACT</a>
+      </a>
   </div>
 </div>
 
 
-
 <!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">MATTHEW BIRKET PHD</span>
+<div class="bgimg-1 w3-display-container" id="home">
+  <div class="w3-display-middle w3-opacity-min" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide">MATTHEW BIRKET PHD</span>
   </div>
-
 </div>
 
 
 <!-- Container (About Section) -->
-
-
 <div class="w3-content w3-container w3-padding-64" id="about">
   <h3 class="w3-center">ABOUT ME</h3>
   <p class="w3-center"><em>"Well, I'm having a good time. Which makes me feel guilty too. How very English." - David Attenborough</em></p>
-  <p>I'm a stem cell biology researcher trained in the UK, USA, Netherlands and France. I've worked in both academia as well as the pharmaceutical industry. I recently joined the wonderful University of Manchester to continue my work on stem cell models of cardiac development and disease.</p>
+  <p>I'm a stem cell biology researcher trained in the UK, USA, The Netherlands and France <span><a href="#locations"><i class="fa fa-arrow-circle-down"></i></a></span> . I've worked in both academia as well as the pharmaceutical industry. I recently joined the wonderful University of Manchester to continue my work on stem cell models of cardiac development and disease.</p>
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
       <img src="img/me.jpg" class="w3-round w3-image" alt="Photo of Me" width="240" height="160">
     </div>
 
-    <!-- Hide this text on small devices -->
     <div class="w3-col m6 w3-padding-large">
       <p>In my research I use human pluripotent stem cells to recreate aspects of heart development in the lab. This helps us to learn about the processes of human heart cell specification but also to make cell models of inherited heart diseases.<br><br>As part of my research I enjoy using computer science to help analyse data and solve problems. Through this site you will find links to the applications I have made for my own use as well as to help other scientists in my field. If you use these apps I hope you find them useful, and if you have feedback I'd be very pleased to hear from you.<br><br>-Matthew<br></p>
     </div>
 
-<div class="w3-container w3-left w3-padding-16 w3-section w3-card" id="nature">
-<a href="publications.html">
+    <div class="w3-container w3-left w3-padding-16 w3-section w3-card" id="nature">
+    <a href="publications.html">
       <img src="img/nature_clip.gif" width="370" class="w3-container w3-hover-opacity" alt="Nature"></a>
-</div>
-<div class="w3-container w3-right w3-padding-16 w3-section w3-card" id="nature2">
-<a href="publications.html">
+    </div>
+
+    <div class="w3-container w3-right w3-padding-16 w3-section w3-card" id="nature2">
+    <a href="publications.html">
       <img src="img/eurostemcell_clip.GIF" width="490" class="w3-container w3-hover-opacity" alt="EuroStemCell"></a>
+    </div>
+  </div>
 </div>
-</div>
-</div>
-</div>
+
 
 
 
@@ -128,15 +128,14 @@ body, html {
   <h3 class="w3-center">MY SCIENTIFIC APPLICATIONS</h3>
   <p class="w3-center">I currently have two applications online. CellTools is for calculating and recording cell growth dynamics and CardioProfiler is for analysing RNA-seq data from cardiac cells and tissue. <em>Click on the links to go to the apps.</em></p><br><br>
 
-  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center">
     <div class="w3-content">
-    <a target="_blank" href="https://lifescience.shinyapps.io/celltools/">
-      <img src="img/CellTools.gif" style="width:50%" class="w3-hover-opacity" alt="CellTools">
+      <a target="_blank" href="https://lifescience.shinyapps.io/celltools/">
+        <img src="img/CellTools.gif" style="width:50%" class="w3-hover-opacity" alt="CellTools">
       </a>
     </div>
-  <br>
-  <br>
+    <br>
+    <br>
     <div class="w3-content">
       <a target="_blank" href="https://lifescience.shinyapps.io/cardioprofiler/">
       <img src="img/CardioProfiler.gif" style="width:70%" class="w3-hover-opacity" alt="CardioProfiler">
@@ -149,58 +148,194 @@ body, html {
 </div>
 
 
+<!-- Panel of links -->
 <div class="w3-row w3-center w3-dark-grey w3-padding-16">
   <div class="w3-quarter w3-section">
-    <span class="w3-xlarge"><a target="_blank" href="./publications.html"</a>Stem Cells</span>
-  </a></div>
+    <span class="w3-xlarge"><a target="_blank" href="./publications.html"</a>Stem Cells</span></a>
+  </div>
   <div class="w3-quarter w3-section">
-    <span class="w3-xlarge"><a target="_blank" href="./publications.html"</a>Cardiac Development</span>
-  </a></div>
+    <span class="w3-xlarge"><a target="_blank" href="./publications.html"</a>Cardiac Development</span></a>
+  </div>
   <div class="w3-quarter w3-section">
-    <span class="w3-xlarge"><a target="_blank" href="./publications.html"</a>Disease Models</span>
-  </a></div>
+    <span class="w3-xlarge"><a target="_blank" href="./publications.html"</a>Disease Models</span></a>
+  </div>
   <div class="w3-quarter w3-section">
-    <span class="w3-xlarge"><a target="_blank" href="./publications.html"</a>Data Science</span>
-  </a></div>
+    <span class="w3-xlarge"><a target="_blank" href="./publications.html"</a>Data Science</span></a>
+  </div>
 </div>
 
 
 <!-- Third Parallax Image with Contact Text -->
 <div class="bgimg-3 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+     <span class="w3-xxlarge w3-text-white w3-wide"></span>
   </div>
 </div>
 
+<!--Where I've worked-->
+<div class="w3-content w3-container w3-padding-64 w3-center" id="locations">
+  <h3>CONTACT</h3>
+  <p>I recently joined The University of Manchester (more information coming soon!). You can click on the map to see where I've worked in the past.</p>
+  
+  <div class="row-padding">
+    <div id="map" class="w3-half w3-container" style="width:450px;height:300px;">
+    </div>
 
+<!-- Buck div-->
+    <div id="buckDiv" class="w3-half w3-container" style="display:none;">
+      <img src="img/buck.jpg" alt="Buck pic" width="450" height="250">
+      <p><b>Buck Institute for Research on Aging</b>, is the USA’s first independent research facility focused solely on understanding the connection between aging and chronic disease in pursuit of the mission to increase the healthy years of life.</p>
+      <p><a target="_blank" href="https://www.buckinstitute.org/"><i class="fa fa-university"></i> https://www.buckinstitute.org/</a></p><br><br>
+    </div>
 
-<!-- Container (Contact Section) -->
-<div class="w3-content w3-container w3-padding-64" id="contact">
-  <h3 class="w3-center">WHERE I WORK</h3>
+<!-- Newc div-->
+    <div id="newcDiv" class="w3-half w3-container" style="display:none;">
+      <img src="img/newc.jpg" alt="Newc pic" width="450" height="250">
+      <p><b>Newcastle University</b> is a member of the Russell Group: the association of leading research-intensive UK universities.</p>
+      <p><a target="_blank" href="https://www.ncl.ac.uk/"><i class="fa fa-university"></i> https://www.ncl.ac.uk/</a></p><br><br>
+    </div>
 
-  <div class="w3-row w3-padding-32 w3-section">
-    
-    <div class="w3-col m8 w3-panel">
-      <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> The University of Manchester, UK<br>
-        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: matthew.birket@gmail.com<br>
-      </div>
+<!-- LUMC div-->
+    <div id="lumcDiv" class="w3-half w3-container" style="display:none;">
+      <img src="img/lumc.jpg" alt="LUMC pic" width="450" height="250">
+      <p><b>Leiden University Medical Center</b> is part of Leiden University, the oldest university in the Netherlands. The LUMC is a modern and high profile research center.</p>
+      <p><a target="_blank" href="https://www.lumc.nl/"><i class="fa fa-university"></i> https://www.lumc.nl/</a></p><br><br>
+    </div>
+
+<!-- Sanofi div-->
+    <div id="sanofiDiv" class="w3-half w3-container" style="display:none;">
+      <img src="img/sanofi.jpg" alt="Sanofi pic" width="450" height="250">
+      <p><b>Sanofi</b> is one of the top 10 largest pharmaceutical companies in the world. It employes more than 100k people.</p>
+      <p><a target="_blank" href="https://www.sanofi.com/"><i class="fa fa-university"></i> https://www.sanofi.com/</a></p><br><br>
+    </div>
+
+<!-- Manc div-->
+    <div id="mancDiv" class="w3-half w3-container" style="display:block;">
+      <img src="img/manc.jpg" alt="Manc pic" width="450" height="250">
+      <p><b>The University of Manchester</b> is the largest single-site university in the UK. Highly ranked nationally and internationally for its research excellence.</p>
+      <p><a target="_blank" href="https://www.manchester.ac.uk/"><i class="fa fa-university"></i> https://www.manchester.ac.uk/</a></p><br><br>
     </div>
   </div>
+
+
+    <h3 class="fa fa-envelope w3-hover-text-black w3-xlarge w3-margin-top"></i> Email: matthew.birket@gmail.com</h3>
+
 </div>
 
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64">
-
-  <a href="./index.html" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <a href="#myNavbar" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <div class="w3-xxxlarge w3-section">
     <a href="https://www.facebook.com/matthew.birket" i class="fa fa-facebook-official w3-hover-opacity"></i></a>
     <a href="https://www.linkedin.com/in/matthew-birket-0835a33a/" i class="fa fa-linkedin w3-hover-opacity"></i></a>
   </div>
   <p>Matthew Birket 2017</p>
 </footer>
- 
+
+
+
+<!-- Add Google Maps -->
+<script>
+
+function initMap() {
+        // Create a map object and specify the DOM element for display.
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 45.5, lng: -52},
+          zoom: 2
+        });
+
+        var newc = new google.maps.Marker({
+          position: {lat: 54.98, lng: -1.62},
+	  icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            scale: 3,
+	    strokeColor: '#ff0000',
+          },
+
+          map: map
+        });
+        var buck = new google.maps.Marker({
+          position: {lat: 38.11, lng: -122.57},
+	  icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            scale: 3,
+	    strokeColor: '#ff0000',
+          },
+          map: map
+        });
+        var lumc = new google.maps.Marker({
+          position: {lat: 52.16, lng: 4.50},
+	  icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            scale: 3,
+	    strokeColor: '#ff0000',
+          },
+          map: map
+        });        
+        var sanofi = new google.maps.Marker({
+          position: {lat: 48.85, lng: -1.35},
+	  icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            scale: 3,
+	    strokeColor: '#ff0000',
+          },
+          map: map
+        });
+        var manc = new google.maps.Marker({
+          position: {lat: 53.48, lng: -2.24},
+	  icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            scale: 3,
+	    strokeColor: '#ff0000',
+          },
+          map: map
+        });     
+
+	buck.addListener('click', function() {
+	  document.getElementById('buckDiv').style.display = 'block';
+	  document.getElementById('newcDiv').style.display = 'none';
+	  document.getElementById('lumcDiv').style.display = 'none';
+	  document.getElementById('sanofiDiv').style.display = 'none';
+	  document.getElementById('mancDiv').style.display = 'none';
+        });
+
+	newc.addListener('click', function() {
+	  document.getElementById('buckDiv').style.display = 'none';
+	  document.getElementById('newcDiv').style.display = 'block';
+	  document.getElementById('lumcDiv').style.display = 'none';
+	  document.getElementById('sanofiDiv').style.display = 'none';
+	  document.getElementById('mancDiv').style.display = 'none';
+        });
+
+	lumc.addListener('click', function() {
+	  document.getElementById('buckDiv').style.display = 'none';
+	  document.getElementById('newcDiv').style.display = 'none';
+	  document.getElementById('lumcDiv').style.display = 'block';
+	  document.getElementById('sanofiDiv').style.display = 'none';
+	  document.getElementById('mancDiv').style.display = 'none';
+        });
+
+	sanofi.addListener('click', function() {
+	  document.getElementById('buckDiv').style.display = 'none';
+	  document.getElementById('newcDiv').style.display = 'none';
+	  document.getElementById('lumcDiv').style.display = 'none';
+	  document.getElementById('sanofiDiv').style.display = 'block';
+	  document.getElementById('mancDiv').style.display = 'none';
+        });
+
+	manc.addListener('click', function() {
+	  document.getElementById('buckDiv').style.display = 'none';
+	  document.getElementById('newcDiv').style.display = 'none';
+	  document.getElementById('lumcDiv').style.display = 'none';
+	  document.getElementById('sanofiDiv').style.display = 'none';
+	  document.getElementById('mancDiv').style.display = 'block';
+        });
+        }
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-BmvPY93Rhf3UhYRDypvxztaf_DvCPKI&callback=initMap" async defer></script>
+
 
 </body>
 </html>
